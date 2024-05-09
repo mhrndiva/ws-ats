@@ -2,14 +2,13 @@ package main
 
 import (
 	"log"
-
-	"github.com/mhrndiva/WS-ATS-714220050/config"
-
-	"github.com/mhrndiva/kemahasiswaan"
+	"github.com/aiteung/musik"
 	"github.com/gofiber/fiber/v2/middleware/cors"
-
-
-	"github.com/mhrndiva/ws-maharani2024/url"
+	//"github.com/indrariksa/cobapakcage/module"
+	"github.com/mhrndiva/ws-ats-714220050/config"
+	"github.com/mhrndiva/ws-ats-714220050/url"
+	//"github.com/mhrndiva/kemahasiswaan/module"
+	//"github.com/mhrndiva/kemahasiswaan/model"
 
 	"github.com/gofiber/fiber/v2"
 )

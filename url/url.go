@@ -1,7 +1,7 @@
 package url
 
 import (
-	"github.com/mhrndiva/kemahasiswaan/controller"
+	"github.com/mhrndiva/ws-ats-714220050/controller"
 
 	"github.com/gofiber/fiber/v2"
 )
@@ -18,7 +18,5 @@ func Web(page *fiber.App) {
 	page.Options("/", controller.Sink)
 
 	page.Get("/checkip", controller.Homepage) //ujicoba panggil package musik
-	page.Get("/presensi", controller.GetPresensi)
-	page.Get("/presensi/:id", controller.GetPresensiID) //menampilkan data presensi berdasarkan id
-
+	page.Get("/", controller.GetMahasiswa)
 }

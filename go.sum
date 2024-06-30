@@ -57,8 +57,6 @@ github.com/mattn/go-isatty v0.0.20 h1:xfD0iDuEKnDkl03q4limB+vH+GxLEtL/jb4xVJSWWE
 github.com/mattn/go-isatty v0.0.20/go.mod h1:W+V8PltTTMOvKvAeJH7IuucS94S2C6jfK/D7dTCTo3Y=
 github.com/mattn/go-runewidth v0.0.15 h1:UNAjwbU9l54TA3KzvqLGxwWjHmMgBUVhBiTjelZgg3U=
 github.com/mattn/go-runewidth v0.0.15/go.mod h1:Jdepj2loyihRzMpdS35Xk/zdY8IAYHsh153qUoGf23w=
-github.com/mhrndiva/kemahasiswaan v0.0.4 h1:cQm8Aqf4k/Mq7X/xO6TttZhtb4/Wt18/GKPx6tWZsko=
-github.com/mhrndiva/kemahasiswaan v0.0.4/go.mod h1:Z1/6XbHVIYoXz2Fw+UBse7hFFQ4d8IcP49keYySARYo=
 github.com/mhrndiva/kemahasiswaan v0.0.6 h1:9vPLTshvvzqYBbz18zPnSZZzW1TfFskxh5OGWRGbBec=
 github.com/mhrndiva/kemahasiswaan v0.0.6/go.mod h1:Z1/6XbHVIYoXz2Fw+UBse7hFFQ4d8IcP49keYySARYo=
 github.com/microsoft/go-mssqldb v1.0.0 h1:k2p2uuG8T5T/7Hp7/e3vMGTnnR0sU4h8d1CcC71iLHU=

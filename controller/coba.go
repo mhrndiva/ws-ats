@@ -22,7 +22,12 @@ func GetMahasiswa(c *fiber.Ctx) error {
 	return c.JSON(ps)
 }
 
-// func GetPresensi(c *fiber.Ctx) error {
-// 	ps := cek.GetAllPresensi()
-// 	return c.JSON(ps)
-// }
+func GetPresensi(c *fiber.Ctx) error {
+	ps := cek.GetAllPresensi()
+	return c.JSON(ps)
+}
+
+func GetMatkul (c *fiber.Ctx) error {
+	ps := cek.GetAllMatkul()
+	return c.JSON(ps)
+}

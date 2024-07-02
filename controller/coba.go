@@ -80,7 +80,7 @@ func InsertDataPresensi(c *fiber.Ctx) error {
     
     // Validasi data
     if presensi.Biodata.Nama == "" || presensi.Npm == 0 || presensi.Biodata.Jurusan == "" ||
-       presensi.Matkul.Nama_matkul == "" || presensi.Checkin == "" {
+       presensi.Matkul.Nama_matkul == "" || presensi.Checkin == "" || presensi.Matkul.Dosen == ""{
         return c.Status(http.StatusBadRequest).JSON(fiber.Map{
             "status":  http.StatusBadRequest,
             "message": "Incomplete data",

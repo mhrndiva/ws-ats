@@ -67,43 +67,28 @@ func GetMatkul (c *fiber.Ctx) error {
 }
 
 func InsertDataPresensi(c *fiber.Ctx) error {
-    db := config.Ulbimongoconn
-    var presensi inimodel.Presensi
-    
-    // Parsing body request
-    if err := c.BodyParser(&presensi); err != nil {
-        return c.Status(http.StatusInternalServerError).JSON(fiber.Map{
-            "status":  http.StatusInternalServerError,
-            "message": err.Error(),
-        })
-    }
-    
-    // Validasi data
-    if presensi.Biodata.Nama == "" || presensi.Npm == 0 || presensi.Biodata.Jurusan == "" ||
-       presensi.Matkul.Nama_matkul == "" || presensi.Checkin == "" || presensi.Matkul.Dosen == ""{
-        return c.Status(http.StatusBadRequest).JSON(fiber.Map{
-            "status":  http.StatusBadRequest,
-            "message": "Incomplete data",
-        })
-    }
-    
-    // Insert data presensi
-    insertedID, err := cek.InsertPresensi(db, "presensi",
-        presensi.Npm,
-        presensi.Matkul,
-        presensi.Biodata,
-        presensi.Checkin)
-    if err != nil {
-        return c.Status(http.StatusInternalServerError).JSON(fiber.Map{
-            "status":  http.StatusInternalServerError,
-            "message": err.Error(),
-        })
-    }
-    
-    // Response sukses
-    return c.Status(http.StatusOK).JSON(fiber.Map{
-        "status":      http.StatusOK,
-        "message":     "Data berhasil disimpan.",
-        "inserted_id": insertedID,
-    })
+	db := config.Ulbimongoconn
+	var presensi inimodel.Presensi
+	if err := c.BodyParser(&presensi); err != nil {
+		return c.Status(http.StatusInternalServerError).JSON(fiber.Map{
+			"status":  http.StatusInternalServerError,
+			"message": err.Error(),
+		})
+	}
+	insertedID, err := cek.InsertPresensi(db, "presensi",
+		presensi.Npm,
+		presensi.Matkul,
+		presensi.Biodata,
+		presensi.Checkin)
+	if err != nil {
+		return c.Status(http.StatusInternalServerError).JSON(fiber.Map{
+			"status":  http.StatusInternalServerError,
+			"message": err.Error(),
+		})
+	}
+	return c.Status(http.StatusOK).JSON(fiber.Map{
+		"status":      http.StatusOK,
+		"message":     "Data berhasil disimpan.",
+		"inserted_id": insertedID,
+	})
 }

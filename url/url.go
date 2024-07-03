@@ -21,4 +21,5 @@ func Web(page *fiber.App) {
 	page.Get("/mahasiswa", controller.GetMahasiswa) //panggil data mahasiswa
 	page.Get("/presensi", controller.GetPresensi) //panggil data presensi
 	page.Get("/matkul", controller.GetMatkul) //panggil matkul
+	page.Post("/insert", controller.InsertDataPresensi)
 }

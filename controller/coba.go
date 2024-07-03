@@ -4,6 +4,7 @@ import (
 	"fmt"
 	//"github.com/mhrndiva/kemahasiswaan"
 	"github.com/gofiber/fiber/v2"
+	inimodel "github.com/mhrndiva/kemahasiswaan/model"
 	cek "github.com/mhrndiva/kemahasiswaan/module"
 	"github.com/aiteung/musik"
 	"github.com/mhrndiva/ws-ats-714220050/config"
@@ -65,3 +66,29 @@ func GetMatkul (c *fiber.Ctx) error {
 	return c.JSON(ps)
 }
 
+func InsertDataPresensi(c *fiber.Ctx) error {
+	db := config.Ulbimongoconn
+	var presensi inimodel.Presensi
+	if err := c.BodyParser(&presensi); err != nil {
+		return c.Status(http.StatusInternalServerError).JSON(fiber.Map{
+			"status":  http.StatusInternalServerError,
+			"message": err.Error(),
+		})
+	}
+	insertedID, err := cek.InsertPresensi(db, "presensi",
+		presensi.Npm,
+		presensi.Matkul,
+		presensi.Biodata,
+		presensi.Checkin)
+	if err != nil {
+		return c.Status(http.StatusInternalServerError).JSON(fiber.Map{
+			"status":  http.StatusInternalServerError,
+			"message": err.Error(),
+		})
+	}
+	return c.Status(http.StatusOK).JSON(fiber.Map{
+		"status":      http.StatusOK,
+		"message":     "Data berhasil disimpan.",
+		"inserted_id": insertedID,
+	})
+}

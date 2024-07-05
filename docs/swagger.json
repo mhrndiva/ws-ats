@@ -14,7 +14,7 @@
         },
         "version": "1.0"
     },
-    "host": "https://ws-ats-714220050-cc57ecdf5b73.herokuapp.com",
+    "host": "ws-ats-714220050-cc57ecdf5b73.herokuapp.com",
     "basePath": "/",
     "paths": {
         "/presensi": {

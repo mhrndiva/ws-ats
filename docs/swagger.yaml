@@ -45,6 +45,23 @@ definitions:
         example: 714220050
         type: integer
     type: object
+  controller.ReqPresensi:
+    properties:
+      _id:
+        example: "123456789"
+        type: string
+      biodata:
+        $ref: '#/definitions/controller.Mahasiswa'
+      checkin:
+        type: string
+      datetime:
+        type: string
+      matkul:
+        $ref: '#/definitions/controller.Matkul'
+      npm:
+        example: 714220050
+        type: integer
+    type: object
 host: ws-ats-714220050-cc57ecdf5b73.herokuapp.com
 info:
   contact:
@@ -66,7 +83,7 @@ paths:
         name: request
         required: true
         schema:
-          $ref: '#/definitions/controller.Presensi'
+          $ref: '#/definitions/controller.ReqPresensi'
       produces:
       - application/json
       responses:

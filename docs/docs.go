@@ -39,7 +39,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/controller.Presensi"
+                            "$ref": "#/definitions/controller.ReqPresensi"
                         }
                     }
                 ],
@@ -169,6 +169,31 @@ const docTemplate = `{
             }
         },
         "controller.Presensi": {
+            "type": "object",
+            "properties": {
+                "_id": {
+                    "type": "string",
+                    "example": "123456789"
+                },
+                "biodata": {
+                    "$ref": "#/definitions/controller.Mahasiswa"
+                },
+                "checkin": {
+                    "type": "string"
+                },
+                "datetime": {
+                    "type": "string"
+                },
+                "matkul": {
+                    "$ref": "#/definitions/controller.Matkul"
+                },
+                "npm": {
+                    "type": "integer",
+                    "example": 714220050
+                }
+            }
+        },
+        "controller.ReqPresensi": {
             "type": "object",
             "properties": {
                 "_id": {

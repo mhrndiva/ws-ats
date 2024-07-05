@@ -22,7 +22,7 @@ import (
 // @contact.url https://github.com/mhrndiva
 // @contact.email 714220050@std.ulbi.ac.id
 
-// @host https://ws-ats-714220050-cc57ecdf5b73.herokuapp.com
+// @host ws-ats-714220050-cc57ecdf5b73.herokuapp.com
 // @BasePath /
 // @schemes https http
 

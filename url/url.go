@@ -2,7 +2,7 @@ package url
 
 import (
 	"github.com/mhrndiva/ws-ats-714220050/controller"
-	"github.com/gofiber/swagger" // swagger handler
+	"github.com/gofiber/swagger"
 
 	"github.com/gofiber/fiber/v2"
 

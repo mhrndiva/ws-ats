@@ -31,6 +31,7 @@ definitions:
   controller.Presensi:
     properties:
       _id:
+        example: "123456789"
         type: string
       biodata:
         $ref: '#/definitions/controller.Mahasiswa'
@@ -41,6 +42,7 @@ definitions:
       matkul:
         $ref: '#/definitions/controller.Matkul'
       npm:
+        example: 714220050
         type: integer
     type: object
 host: ws-ats-714220050-cc57ecdf5b73.herokuapp.com

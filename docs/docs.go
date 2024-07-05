@@ -172,7 +172,8 @@ const docTemplate = `{
             "type": "object",
             "properties": {
                 "_id": {
-                    "type": "string"
+                    "type": "string",
+                    "example": "123456789"
                 },
                 "biodata": {
                     "$ref": "#/definitions/controller.Mahasiswa"
@@ -187,7 +188,8 @@ const docTemplate = `{
                     "$ref": "#/definitions/controller.Matkul"
                 },
                 "npm": {
-                    "type": "integer"
+                    "type": "integer",
+                    "example": 714220050
                 }
             }
         }

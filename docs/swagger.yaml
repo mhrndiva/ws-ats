@@ -1,4 +1,48 @@
 basePath: /
+definitions:
+  controller.Mahasiswa:
+    properties:
+      _id:
+        type: string
+      alamat:
+        type: string
+      email:
+        type: string
+      jurusan:
+        type: string
+      nama:
+        type: string
+      npm:
+        type: integer
+      phone_number:
+        type: string
+    type: object
+  controller.Matkul:
+    properties:
+      dosen:
+        type: string
+      jadwal:
+        type: string
+      namamatkul:
+        type: string
+      sks:
+        type: integer
+    type: object
+  controller.Presensi:
+    properties:
+      _id:
+        type: string
+      biodata:
+        $ref: '#/definitions/controller.Mahasiswa'
+      checkin:
+        type: string
+      datetime:
+        type: string
+      matkul:
+        $ref: '#/definitions/controller.Matkul'
+      npm:
+        type: integer
+    type: object
 host: https://ws-ats-714220050-cc57ecdf5b73.herokuapp.com
 info:
   contact:
@@ -8,7 +52,22 @@ info:
   description: This is a sample swagger for Fiber
   title: TES SWAGGER ULBI
   version: "1.0"
-paths: {}
+paths:
+  /presensi:
+    get:
+      consumes:
+      - application/json
+      description: Mengambil semua data presensi.
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/controller.Presensi'
+      summary: Get All Data Presensi.
+      tags:
+      - Presensi
 schemes:
 - https
 - http

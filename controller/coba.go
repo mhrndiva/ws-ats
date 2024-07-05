@@ -55,7 +55,14 @@ func GetMahasiswaID(c *fiber.Ctx) error {
 	}
 	return c.JSON(ps)
 }
-
+// GetPresensi godoc
+// @Summary Get All Data Presensi.
+// @Description Mengambil semua data presensi.
+// @Tags Presensi
+// @Accept json
+// @Produce json
+// @Success 200 {object} Presensi
+// @Router /presensi [get]
 func GetPresensi(c *fiber.Ctx) error {
 	ps := cek.GetAllPresensi()
 	return c.JSON(ps)

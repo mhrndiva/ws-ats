@@ -2,8 +2,10 @@ package url
 
 import (
 	"github.com/mhrndiva/ws-ats-714220050/controller"
+	"github.com/gofiber/swagger" // swagger handler
 
 	"github.com/gofiber/fiber/v2"
+
 )
 
 func Web(page *fiber.App) {
@@ -25,4 +27,5 @@ func Web(page *fiber.App) {
 	page.Get("/presensi/:id", controller.GetPresensiID) //menampilkan data presensi berdasarkan id
 	page.Put("/update/:id", controller.UpdateData)
 	page.Delete("/delete/:id", controller.DeletePresensiByID)
+	page.Get("/docs/*", swagger.HandlerDefault)
 }

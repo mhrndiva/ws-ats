@@ -225,16 +225,20 @@ const docTemplate = `{
             "type": "object",
             "properties": {
                 "dosen": {
-                    "type": "string"
+                    "type": "string",
+                    "example": "Roni Habibie"
                 },
                 "jadwal": {
-                    "type": "string"
+                    "type": "string",
+                    "example": "Senin, Selasa, Rabu, Kamis, Jumat, Sabtu, Minggu"
                 },
                 "namamatkul": {
-                    "type": "string"
+                    "type": "string",
+                    "example": "Kewirausahaan"
                 },
                 "sks": {
-                    "type": "integer"
+                    "type": "integer",
+                    "example": 2
                 }
             }
         },

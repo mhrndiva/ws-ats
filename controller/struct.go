@@ -46,8 +46,8 @@ type ReqPresensi struct {
 }
 
 type ReqMatkul struct {
-	Nama_matkul   string   `bson:"namamatkul,omitempty" json:"namamatkul,omitempty" example: "Kewirausahaan"`
-	Jadwal        string   `bson:"jadwal,omitempty" json:"jadwal,omitempty" example: "Senin, Selasa, Rabu, Kamis, Jumat, Sabtu, Minggu"`
-	Sks      	  int      `bson:"sks,omitempty" json:"sks,omitempty" example: "2"`
-	Dosen         string   `bson:"dosen,omitempty" json:"dosen,omitempty" example: "Roni Habibie"`
+	Nama_matkul string `bson:"namamatkul,omitempty" json:"namamatkul,omitempty" example:"Kewirausahaan"`
+	Jadwal      string `bson:"jadwal,omitempty" json:"jadwal,omitempty" example:"Senin, Selasa, Rabu, Kamis, Jumat, Sabtu, Minggu"`
+	Sks         int    `bson:"sks,omitempty" json:"sks,omitempty" example:"2"`
+	Dosen       string `bson:"dosen,omitempty" json:"dosen,omitempty" example:"Roni Habibie"`
 }

@@ -68,12 +68,16 @@ definitions:
   controller.ReqMatkul:
     properties:
       dosen:
+        example: Roni Habibie
         type: string
       jadwal:
+        example: Senin, Selasa, Rabu, Kamis, Jumat, Sabtu, Minggu
         type: string
       namamatkul:
+        example: Kewirausahaan
         type: string
       sks:
+        example: 2
         type: integer
     type: object
   controller.ReqPresensi:

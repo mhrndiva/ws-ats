@@ -50,8 +50,6 @@ definitions:
         $ref: '#/definitions/controller.Mahasiswa'
       checkin:
         type: string
-      datetime:
-        type: string
       matkul:
         $ref: '#/definitions/controller.Matkul'
       npm:

@@ -41,7 +41,6 @@ type ReqMahasiswa struct {
 
 type ReqPresensi struct {
 	Npm			 int                `bson:"npm,omitempty" json:"npm,omitempty" example:"714220050"`
-	Datetime     primitive.DateTime `bson:"datetime,omitempty" json:"datetime,omitempty"swaggertype:"string" example: "2024-09-01T00:00:00Z" format:"date-time"`
 	Matkul       Matkul             `bson:"matkul,omitempty" json:"matkul,omitempty"`
 	Biodata      Mahasiswa          `bson:"biodata,omitempty" json:"biodata,omitempty"`
 	Checkin		 string				`bson:"checkin,omitempty" json:"checkin,omitempty" example: "Hadir"`

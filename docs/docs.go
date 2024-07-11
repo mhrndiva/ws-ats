@@ -201,9 +201,6 @@ const docTemplate = `{
                 "checkin": {
                     "type": "string"
                 },
-                "datetime": {
-                    "type": "string"
-                },
                 "matkul": {
                     "$ref": "#/definitions/controller.Matkul"
                 },

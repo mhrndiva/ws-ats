@@ -22,7 +22,6 @@ type Matkul struct {
 }
 
 type Presensi struct {
-	ID           primitive.ObjectID `bson:"_id,omitempty" json:"_id,omitempty" example:"123456789"`
 	Npm			 int            `bson:"npm,omitempty" json:"npm,omitempty" example:"714220050"`
 	Datetime     primitive.DateTime `bson:"datetime,omitempty" json:"datetime,omitempty"swaggertype:"string" example:"2`
 	Matkul       Matkul               `bson:"matkul,omitempty" json:"matkul,omitempty" example: "2024-09-01T00:00:00Z" format:"date-time`
@@ -31,7 +30,6 @@ type Presensi struct {
 }
 
 type ReqMahasiswa struct {
-	ID           primitive.ObjectID `bson:"_id,omitempty" json:"_id,omitempty" example: "123456789"`
 	Nama         string             `bson:"nama,omitempty" json:"nama,omitempty" example: "Devi Wulandari"`
 	Npm          int				 `bson:"npm,omitempty" json:"npm,omitempty" example: "714220050"`
 	Phone_number string             `bson:"phone_number,omitempty" json:"phone_number,omitempty" example: "08123456789"`
@@ -41,7 +39,6 @@ type ReqMahasiswa struct {
 }
 
 type ReqPresensi struct {
-	ID           primitive.ObjectID `bson:"_id,omitempty" json:"_id,omitempty" example:"123456789"`
 	Npm			 int            `bson:"npm,omitempty" json:"npm,omitempty" example:"714220050"`
 	Datetime     primitive.DateTime `bson:"datetime,omitempty" json:"datetime,omitempty"swaggertype:"string" example:"2`
 	Matkul       Matkul               `bson:"matkul,omitempty" json:"matkul,omitempty" example: "2024-09-01T00:00:00Z" format:"date-time`

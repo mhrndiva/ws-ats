@@ -16,17 +16,18 @@ type Mahasiswa struct {
 
 type Matkul struct {
 	Nama_matkul   string   `bson:"namamatkul,omitempty" json:"namamatkul,omitempty" example: "Kewirausahaan"`
-	Jadwal        string  `bson:"jadwal,omitempty" json:"jadwal,omitempty" example: "Senin, Selasa, Rabu, Kamis, Jumat< Sabtu, Minggu"`
+	Jadwal        string   `bson:"jadwal,omitempty" json:"jadwal,omitempty" example: "Senin, Selasa, Rabu, Kamis, Jumat, Sabtu, Minggu"`
 	Sks      	  int      `bson:"sks,omitempty" json:"sks,omitempty" example: "2"`
 	Dosen         string   `bson:"dosen,omitempty" json:"dosen,omitempty" example: "Roni Habibie"`
 }
 
 type Presensi struct {
-	Npm			 int            `bson:"npm,omitempty" json:"npm,omitempty" example:"714220050"`
-	Datetime     primitive.DateTime `bson:"datetime,omitempty" json:"datetime,omitempty"swaggertype:"string" example:"2`
-	Matkul       Matkul               `bson:"matkul,omitempty" json:"matkul,omitempty" example: "2024-09-01T00:00:00Z" format:"date-time`
-	Biodata      Mahasiswa           `bson:"biodata,omitempty" json:"biodata,omitempty"`
-	Checkin		 string					`bson:"checkin,omitempty" json:"checkin,omitempty" example: "Hadir"`
+	ID           primitive.ObjectID `bson:"_id,omitempty" json:"_id,omitempty" example: "123456789"`
+	Npm			 int                `bson:"npm,omitempty" json:"npm,omitempty" example:"714220050"`
+	Datetime     primitive.DateTime `bson:"datetime,omitempty" json:"datetime,omitempty"swaggertype:"string" example: "2024-09-01T00:00:00Z" format:"date-time"`
+	Matkul       Matkul             `bson:"matkul,omitempty" json:"matkul,omitempty"`
+	Biodata      Mahasiswa          `bson:"biodata,omitempty" json:"biodata,omitempty"`
+	Checkin		 string				`bson:"checkin,omitempty" json:"checkin,omitempty" example: "Hadir"`
 }
 
 type ReqMahasiswa struct {
@@ -39,9 +40,9 @@ type ReqMahasiswa struct {
 }
 
 type ReqPresensi struct {
-	Npm			 int            `bson:"npm,omitempty" json:"npm,omitempty" example:"714220050"`
-	Datetime     primitive.DateTime `bson:"datetime,omitempty" json:"datetime,omitempty"swaggertype:"string" example:"2`
-	Matkul       Matkul               `bson:"matkul,omitempty" json:"matkul,omitempty" example: "2024-09-01T00:00:00Z" format:"date-time`
-	Biodata      Mahasiswa           `bson:"biodata,omitempty" json:"biodata,omitempty"`
-	Checkin		 string					`bson:"checkin,omitempty" json:"checkin,omitempty" example: "Hadir"`
+	Npm			 int                `bson:"npm,omitempty" json:"npm,omitempty" example:"714220050"`
+	Datetime     primitive.DateTime `bson:"datetime,omitempty" json:"datetime,omitempty"swaggertype:"string" example: "2024-09-01T00:00:00Z" format:"date-time"`
+	Matkul       Matkul             `bson:"matkul,omitempty" json:"matkul,omitempty"`
+	Biodata      Mahasiswa          `bson:"biodata,omitempty" json:"biodata,omitempty"`
+	Checkin		 string				`bson:"checkin,omitempty" json:"checkin,omitempty" example: "Hadir"`
 }

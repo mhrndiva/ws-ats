@@ -30,6 +30,8 @@ definitions:
     type: object
   controller.Presensi:
     properties:
+      _id:
+        type: string
       biodata:
         $ref: '#/definitions/controller.Mahasiswa'
       checkin:

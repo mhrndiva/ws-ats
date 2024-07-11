@@ -171,6 +171,9 @@ const docTemplate = `{
         "controller.Presensi": {
             "type": "object",
             "properties": {
+                "_id": {
+                    "type": "string"
+                },
                 "biodata": {
                     "$ref": "#/definitions/controller.Mahasiswa"
                 },

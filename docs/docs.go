@@ -192,14 +192,44 @@ const docTemplate = `{
                 }
             }
         },
+        "controller.ReqMahasiswa": {
+            "type": "object",
+            "properties": {
+                "alamat": {
+                    "type": "string",
+                    "example": "Sarijadi"
+                },
+                "email": {
+                    "type": "string",
+                    "example": "devi443@gmail.com"
+                },
+                "jurusan": {
+                    "type": "string",
+                    "example": "Informatika"
+                },
+                "nama": {
+                    "type": "string",
+                    "example": "Devi Wulandari"
+                },
+                "npm": {
+                    "type": "integer",
+                    "example": 714220050
+                },
+                "phone_number": {
+                    "type": "string",
+                    "example": "08123456789"
+                }
+            }
+        },
         "controller.ReqPresensi": {
             "type": "object",
             "properties": {
                 "biodata": {
-                    "$ref": "#/definitions/controller.Mahasiswa"
+                    "$ref": "#/definitions/controller.ReqMahasiswa"
                 },
                 "checkin": {
-                    "type": "string"
+                    "type": "string",
+                    "example": "Hadir"
                 },
                 "matkul": {
                     "$ref": "#/definitions/controller.Matkul"

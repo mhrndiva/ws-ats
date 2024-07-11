@@ -44,11 +44,33 @@ definitions:
         example: 714220050
         type: integer
     type: object
+  controller.ReqMahasiswa:
+    properties:
+      alamat:
+        example: Sarijadi
+        type: string
+      email:
+        example: devi443@gmail.com
+        type: string
+      jurusan:
+        example: Informatika
+        type: string
+      nama:
+        example: Devi Wulandari
+        type: string
+      npm:
+        example: 714220050
+        type: integer
+      phone_number:
+        example: "08123456789"
+        type: string
+    type: object
   controller.ReqPresensi:
     properties:
       biodata:
-        $ref: '#/definitions/controller.Mahasiswa'
+        $ref: '#/definitions/controller.ReqMahasiswa'
       checkin:
+        example: Hadir
         type: string
       matkul:
         $ref: '#/definitions/controller.Matkul'

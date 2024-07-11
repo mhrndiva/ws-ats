@@ -65,6 +65,17 @@ definitions:
         example: "08123456789"
         type: string
     type: object
+  controller.ReqMatkul:
+    properties:
+      dosen:
+        type: string
+      jadwal:
+        type: string
+      namamatkul:
+        type: string
+      sks:
+        type: integer
+    type: object
   controller.ReqPresensi:
     properties:
       biodata:
@@ -73,7 +84,7 @@ definitions:
         example: Hadir
         type: string
       matkul:
-        $ref: '#/definitions/controller.Matkul'
+        $ref: '#/definitions/controller.ReqMatkul'
       npm:
         example: 714220050
         type: integer

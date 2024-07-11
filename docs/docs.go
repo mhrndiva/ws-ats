@@ -221,6 +221,23 @@ const docTemplate = `{
                 }
             }
         },
+        "controller.ReqMatkul": {
+            "type": "object",
+            "properties": {
+                "dosen": {
+                    "type": "string"
+                },
+                "jadwal": {
+                    "type": "string"
+                },
+                "namamatkul": {
+                    "type": "string"
+                },
+                "sks": {
+                    "type": "integer"
+                }
+            }
+        },
         "controller.ReqPresensi": {
             "type": "object",
             "properties": {
@@ -232,7 +249,7 @@ const docTemplate = `{
                     "example": "Hadir"
                 },
                 "matkul": {
-                    "$ref": "#/definitions/controller.Matkul"
+                    "$ref": "#/definitions/controller.ReqMatkul"
                 },
                 "npm": {
                     "type": "integer",

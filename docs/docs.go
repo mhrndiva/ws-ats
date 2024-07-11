@@ -171,10 +171,6 @@ const docTemplate = `{
         "controller.Presensi": {
             "type": "object",
             "properties": {
-                "_id": {
-                    "type": "string",
-                    "example": "123456789"
-                },
                 "biodata": {
                     "$ref": "#/definitions/controller.Mahasiswa"
                 },
@@ -196,10 +192,6 @@ const docTemplate = `{
         "controller.ReqPresensi": {
             "type": "object",
             "properties": {
-                "_id": {
-                    "type": "string",
-                    "example": "123456789"
-                },
                 "biodata": {
                     "$ref": "#/definitions/controller.Mahasiswa"
                 },

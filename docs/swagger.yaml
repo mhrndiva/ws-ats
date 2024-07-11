@@ -30,9 +30,6 @@ definitions:
     type: object
   controller.Presensi:
     properties:
-      _id:
-        example: "123456789"
-        type: string
       biodata:
         $ref: '#/definitions/controller.Mahasiswa'
       checkin:
@@ -47,9 +44,6 @@ definitions:
     type: object
   controller.ReqPresensi:
     properties:
-      _id:
-        example: "123456789"
-        type: string
       biodata:
         $ref: '#/definitions/controller.Mahasiswa'
       checkin:

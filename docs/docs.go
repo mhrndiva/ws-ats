@@ -54,7 +54,7 @@ const docTemplate = `{
                 }
             }
         },
-        "/insert": {
+        "/devi": {
             "post": {
                 "description": "Input data presensi.",
                 "consumes": [

@@ -23,7 +23,9 @@ func Homepage(c *fiber.Ctx) error {
 func GetMahasiswa(c *fiber.Ctx) error {
 	ps := cek.GetAllMahasiswa()
 	return c.JSON(ps)
+	
 }
+
 
 func GetMahasiswaID(c *fiber.Ctx) error {
 	id := c.Params("id")
@@ -82,7 +84,7 @@ func GetMatkul (c *fiber.Ctx) error {
 // @Success 200 {object} Presensi
 // @Failure 400
 // @Failure 500
-// @Router /insert [post]
+// @Router /devi [post]
 func InsertDataPresensi(c *fiber.Ctx) error {
 	db := config.Ulbimongoconn
 	var presensi inimodel.Presensi

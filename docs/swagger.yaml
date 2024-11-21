@@ -126,7 +126,7 @@ paths:
       summary: Delete data presensi.
       tags:
       - Presensi
-  /insert:
+  /devi:
     post:
       consumes:
       - application/json

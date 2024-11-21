@@ -1,6 +1,8 @@
 module github.com/mhrndiva/ws-ats-714220050
 
-go 1.20
+go 1.21
+
+toolchain go1.23.3
 
 //toolchain go1.22.1
 
@@ -9,7 +11,7 @@ require (
 	github.com/aiteung/musik v0.0.5
 	github.com/gofiber/fiber/v2 v2.52.5
 	github.com/gofiber/swagger v1.1.0
-	github.com/mhrndiva/kemahasiswaan v0.0.14
+	github.com/mhrndiva/kemahasiswaan v0.0.15
 	github.com/swaggo/swag v1.16.3
 	go.mau.fi/whatsmeow v0.0.0-20240507080416-01b0547014dc
 	go.mongodb.org/mongo-driver v1.15.0

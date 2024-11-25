@@ -2,11 +2,7 @@ module github.com/mhrndiva/ws-ats-714220050
 
 go 1.21
 
-<<<<<<< HEAD
 toolchain go1.23.3
-=======
-toolchain go1.22.1
->>>>>>> e39a7bf5ac4fdf40dc7515b6799521389dc26e3d
 
 //toolchain go1.22.1
 
